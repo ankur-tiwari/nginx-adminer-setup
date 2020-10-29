@@ -8,6 +8,7 @@ To get an updated version of adminer use following command:
 sudo wget "http://www.adminer.org/latest.php" -O /usr/share/adminer/latest.php
 Now go to your Nginx default file of nginx and paste the following code
 
+```
 location /adminer {
    root /usr/share/;
             index index.php index.html index.htm;
@@ -18,5 +19,7 @@ location /adminer {
                 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             }
 }
+
+```
 Simple restart your nginx server using the following commands sudo service nginx restart
 
